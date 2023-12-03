@@ -126,14 +126,14 @@ extension Artwork {
     }
     //=================================================================================================================
     public func artData(forTileID tileid:Int) -> Data {
-        guard tileid >= 0 && tileid <= 0xFFFF else {
+        guard tileid >= 0 && tileid <= 0xFFFF  && tileid < artData.count else {
             return Data()
         }
         return artData[tileid ]
     }
     //=================================================================================================================
     public func terrainData(forTileID tileid:Int) -> Data {
-        guard tileid >= 0 && tileid < 0x4000 else {
+        guard tileid >= 0 && tileid < 0x4000  && terrainData.count < tileid else {
             return Data()
         }
         return terrainData[tileid ]
