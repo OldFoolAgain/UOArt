@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17150" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22155" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17150"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22155"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -11,13 +11,29 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="UOArt" customModuleProvider="target">
             <connections>
+                <outlet property="artController" destination="whA-gF-MIn" id="sGr-Ug-5Iy"/>
+                <outlet property="artViewHolder" destination="Sl0-w1-RQC" id="Fws-K1-cji"/>
+                <outlet property="terrainController" destination="CE5-Di-fZp" id="rCZ-Uy-gY0"/>
+                <outlet property="terrainViewHolder" destination="xos-dP-u8N" id="cd9-QI-XRW"/>
+                <outlet property="uoData" destination="5JL-cI-MDF" id="fGY-EF-DRM"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="5JL-cI-MDF" userLabel="UO Data" customClass="UOData" customModule="UOArt" customModuleProvider="target"/>
+        <customObject id="whA-gF-MIn" customClass="AllArtViewController" customModule="UOArt" customModuleProvider="target">
+            <connections>
+                <outlet property="uoData" destination="5JL-cI-MDF" id="j7J-QP-FhE"/>
+            </connections>
+        </customObject>
+        <customObject id="CE5-Di-fZp" customClass="AllTerViewController" customModule="UOArt" customModuleProvider="target">
+            <connections>
+                <outlet property="uoData" destination="5JL-cI-MDF" id="aTx-I3-Znb"/>
+            </connections>
+        </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="UOArt" id="1Xt-HY-uBw">
@@ -68,7 +84,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="File" id="bib-Uj-vzu">
                         <items>
-                            <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
+                            <menuItem title="New" enabled="NO" keyEquivalent="n" id="Was-JA-tGl">
                                 <connections>
                                     <action selector="newDocument:" target="-1" id="4Si-XN-c54"/>
                                 </connections>
@@ -97,29 +113,29 @@
                                     <action selector="performClose:" target="-1" id="HmO-Ls-i7Q"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
+                            <menuItem title="Save…" enabled="NO" keyEquivalent="s" id="pxx-59-PXV">
                                 <connections>
                                     <action selector="saveDocument:" target="-1" id="teZ-XB-qJY"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
+                            <menuItem title="Save As…" enabled="NO" keyEquivalent="S" id="Bw7-FT-i3A">
                                 <connections>
                                     <action selector="saveDocumentAs:" target="-1" id="mDf-zr-I0C"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Revert to Saved" keyEquivalent="r" id="KaW-ft-85H">
+                            <menuItem title="Revert to Saved" enabled="NO" keyEquivalent="r" id="KaW-ft-85H">
                                 <connections>
                                     <action selector="revertDocumentToSaved:" target="-1" id="iJ3-Pv-kwq"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
-                            <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
+                            <menuItem title="Page Setup…" enabled="NO" keyEquivalent="P" id="qIS-W8-SiK">
                                 <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                 <connections>
                                     <action selector="runPageLayout:" target="-1" id="Din-rz-gC5"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
+                            <menuItem title="Print…" enabled="NO" keyEquivalent="p" id="aTl-1u-JFS">
                                 <connections>
                                     <action selector="print:" target="-1" id="qaZ-4w-aoO"/>
                                 </connections>
@@ -683,16 +699,112 @@
         <window title="UOArt" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="1133" height="343"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="5120" height="1415"/>
+            <view key="contentView" id="EiT-Mj-1SZ" customClass="BaseView" customModule="UOArt" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="1133" height="343"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField focusRingType="none" horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ffl-NC-wC7">
+                        <rect key="frame" x="135" y="302" width="875" height="21"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="YG4-QY-hkf">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="uoDataLocation.path" id="H3G-a9-VQW"/>
+                        </connections>
+                    </textField>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fpP-DG-rAN">
+                        <rect key="frame" x="18" y="304" width="111" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="UO Data Location" id="Gse-J6-VFB">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1mZ-js-HiJ">
+                        <rect key="frame" x="1014" y="298" width="28" height="26"/>
+                        <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ukx-IP-rs0">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="openDocument:" target="-1" id="uLK-Ys-ORx"/>
+                        </connections>
+                    </button>
+                    <tabView translatesAutoresizingMaskIntoConstraints="NO" id="oKU-jS-rOz">
+                        <rect key="frame" x="13" y="10" width="1107" height="290"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Terrain" identifier="" id="MVf-7H-z2i">
+                                <view key="view" id="RJq-z6-8T1">
+                                    <rect key="frame" x="10" y="33" width="1087" height="244"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="xos-dP-u8N" customClass="BaseView" customModule="UOArt" customModuleProvider="target">
+                                            <rect key="frame" x="17" y="9" width="1053" height="232"/>
+                                        </customView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="xos-dP-u8N" secondAttribute="trailing" constant="17" id="7ZX-4y-fZF"/>
+                                        <constraint firstItem="xos-dP-u8N" firstAttribute="top" secondItem="RJq-z6-8T1" secondAttribute="top" constant="3" id="ALG-7X-N3e"/>
+                                        <constraint firstItem="xos-dP-u8N" firstAttribute="leading" secondItem="RJq-z6-8T1" secondAttribute="leading" constant="17" id="Skp-dG-gY6"/>
+                                        <constraint firstAttribute="bottom" secondItem="xos-dP-u8N" secondAttribute="bottom" constant="9" id="sSe-UC-3s7"/>
+                                    </constraints>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Art" identifier="" id="YXK-LT-wTi">
+                                <view key="view" id="YO1-G6-lWd">
+                                    <rect key="frame" x="10" y="33" width="978" height="242"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Sl0-w1-RQC" customClass="BaseView" customModule="UOArt" customModuleProvider="target">
+                                            <rect key="frame" x="17" y="9" width="944" height="230"/>
+                                        </customView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Sl0-w1-RQC" secondAttribute="bottom" constant="9" id="8Wv-wF-hLu"/>
+                                        <constraint firstItem="Sl0-w1-RQC" firstAttribute="leading" secondItem="YO1-G6-lWd" secondAttribute="leading" constant="17" id="lvO-8P-Me4"/>
+                                        <constraint firstItem="Sl0-w1-RQC" firstAttribute="top" secondItem="YO1-G6-lWd" secondAttribute="top" constant="3" id="xqs-Wo-q4f"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sl0-w1-RQC" secondAttribute="trailing" constant="17" id="zW2-ji-hgc"/>
+                                    </constraints>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-Nb-1Ld">
+                        <rect key="frame" x="1039" y="294" width="81" height="32"/>
+                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E3Y-YI-kjl">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="refreshData:" target="Voe-Tx-rLC" id="syf-T7-LjZ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fpP-DG-rAN" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="98E-9j-LCg"/>
+                    <constraint firstItem="Ffl-NC-wC7" firstAttribute="leading" secondItem="fpP-DG-rAN" secondAttribute="trailing" constant="8" symbolic="YES" id="Agb-2O-HZj"/>
+                    <constraint firstItem="W6q-Nb-1Ld" firstAttribute="firstBaseline" secondItem="1mZ-js-HiJ" secondAttribute="firstBaseline" id="CRJ-iP-OVD"/>
+                    <constraint firstItem="Ffl-NC-wC7" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" symbolic="YES" id="FKo-BH-dN8"/>
+                    <constraint firstItem="W6q-Nb-1Ld" firstAttribute="trailing" secondItem="oKU-jS-rOz" secondAttribute="trailing" id="Ock-DW-lXX"/>
+                    <constraint firstItem="oKU-jS-rOz" firstAttribute="leading" secondItem="fpP-DG-rAN" secondAttribute="leading" id="VZl-uJ-gSF"/>
+                    <constraint firstItem="W6q-Nb-1Ld" firstAttribute="leading" secondItem="1mZ-js-HiJ" secondAttribute="trailing" constant="8" symbolic="YES" id="bB7-0D-PaU"/>
+                    <constraint firstAttribute="bottom" secondItem="oKU-jS-rOz" secondAttribute="bottom" constant="20" symbolic="YES" id="f7K-DN-blH"/>
+                    <constraint firstItem="1mZ-js-HiJ" firstAttribute="leading" secondItem="Ffl-NC-wC7" secondAttribute="trailing" constant="8" symbolic="YES" id="gxT-hk-ZuY"/>
+                    <constraint firstItem="oKU-jS-rOz" firstAttribute="top" secondItem="1mZ-js-HiJ" secondAttribute="bottom" constant="7" id="kNq-hx-dTp"/>
+                    <constraint firstItem="Ffl-NC-wC7" firstAttribute="firstBaseline" secondItem="fpP-DG-rAN" secondAttribute="firstBaseline" id="mgd-OH-oh5"/>
+                    <constraint firstAttribute="trailing" secondItem="W6q-Nb-1Ld" secondAttribute="trailing" constant="20" symbolic="YES" id="vY3-Y0-37K"/>
+                    <constraint firstItem="1mZ-js-HiJ" firstAttribute="firstBaseline" secondItem="fpP-DG-rAN" secondAttribute="firstBaseline" id="wsc-5F-0zc"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="Voe-Tx-rLC" id="top-28-M4D"/>
             </connections>
-            <point key="canvasLocation" x="200" y="400"/>
+            <point key="canvasLocation" x="526.5" y="391.5"/>
         </window>
     </objects>
 </document>

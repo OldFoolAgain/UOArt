@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22155" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22155"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AllTerViewController" customModule="UOArt" customModuleProvider="target">
+            <connections>
+                <outlet property="arrayController" destination="Eee-Bw-zvz" id="1qz-PR-pCy"/>
+                <outlet property="holderView" destination="SVx-nh-Wyv" id="TrJ-KF-YkQ"/>
+                <outlet property="tableView" destination="YMp-5v-iG7" id="Wkl-WX-k2u"/>
+                <outlet property="view" destination="c22-O7-iKe" id="wER-OJ-Opk"/>
+                <outlet property="viewController" destination="PVl-Cb-wMT" id="3IR-Br-2Jr"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="BaseView" customModule="UOArt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="877" height="425"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-lo-etJ">
+                    <rect key="frame" x="0.0" y="0.0" width="96" height="394"/>
+                    <clipView key="contentView" id="b3M-CN-2hT">
+                        <rect key="frame" x="1" y="1" width="94" height="392"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="NjV-sE-rIB" id="YMp-5v-iG7">
+                                <rect key="frame" x="0.0" y="0.0" width="94" height="364"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <size key="intercellSpacing" width="17" height="0.0"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="82" minWidth="40" maxWidth="1000" id="p09-jH-GIi">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Tile ID">
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="AnF-ZE-LGA">
+                                            <numberFormatter key="formatter" formatterBehavior="custom10_4" allowsFloats="NO" usesGroupingSeparator="NO" formatWidth="-1" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="ryO-ss-JUP"/>
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <connections>
+                                            <binding destination="Eee-Bw-zvz" name="textColor" keyPath="arrangedObjects.color" id="Q5T-x0-oJ5"/>
+                                            <binding destination="Eee-Bw-zvz" name="value" keyPath="arrangedObjects.index" id="309-bt-keR"/>
+                                        </connections>
+                                    </tableColumn>
+                                </tableColumns>
+                            </tableView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="aU8-tE-GPh">
+                        <rect key="frame" x="1" y="377" width="94" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="qMo-DG-ABv">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <tableHeaderView key="headerView" wantsLayer="YES" id="NjV-sE-rIB">
+                        <rect key="frame" x="0.0" y="0.0" width="94" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableHeaderView>
+                </scrollView>
+                <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="neb-vX-933">
+                    <rect key="frame" x="0.0" y="402" width="96" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="C1T-7r-AAc"/>
+                        <constraint firstAttribute="width" constant="96" id="TV2-Bf-aW8"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="w6Y-vc-A23">
+                        <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" allowsFloats="NO" usesGroupingSeparator="NO" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="IPQ-hd-h7H">
+                            <real key="minimum" value="0.0"/>
+                            <real key="maximum" value="16383"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="currentIndex" id="Gvr-oi-muq"/>
+                    </connections>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="SVx-nh-Wyv" customClass="BaseView" customModule="UOArt" customModuleProvider="target">
+                    <rect key="frame" x="104" y="0.0" width="773" height="425"/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Idt-lo-etJ" firstAttribute="top" secondItem="neb-vX-933" secondAttribute="bottom" constant="8" symbolic="YES" id="0lX-Tu-tbE"/>
+                <constraint firstItem="neb-vX-933" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="7JT-ad-6CI"/>
+                <constraint firstItem="neb-vX-933" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="NND-hH-Npu"/>
+                <constraint firstAttribute="bottom" secondItem="Idt-lo-etJ" secondAttribute="bottom" id="OWR-zH-I9y"/>
+                <constraint firstItem="Idt-lo-etJ" firstAttribute="leading" secondItem="neb-vX-933" secondAttribute="leading" id="QfW-HK-AdC"/>
+                <constraint firstItem="SVx-nh-Wyv" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="c9F-wE-Pcd"/>
+                <constraint firstItem="Idt-lo-etJ" firstAttribute="trailing" secondItem="neb-vX-933" secondAttribute="trailing" id="eaJ-ya-cmy"/>
+                <constraint firstAttribute="bottom" secondItem="SVx-nh-Wyv" secondAttribute="bottom" id="gDt-lS-9qv"/>
+                <constraint firstItem="SVx-nh-Wyv" firstAttribute="leading" secondItem="Idt-lo-etJ" secondAttribute="trailing" constant="8" symbolic="YES" id="i93-aN-O1B"/>
+                <constraint firstAttribute="trailing" secondItem="SVx-nh-Wyv" secondAttribute="trailing" id="kOE-bg-nDY"/>
+            </constraints>
+            <point key="canvasLocation" x="338.5" y="230.5"/>
+        </customView>
+        <customObject id="PVl-Cb-wMT" customClass="TerrainViewController" customModule="UOArt" customModuleProvider="target">
+            <connections>
+                <outlet property="parentController" destination="-2" id="foW-GY-RdD"/>
+            </connections>
+        </customObject>
+        <userDefaultsController representsSharedInstance="YES" id="KDD-hI-mgl"/>
+        <arrayController id="Eee-Bw-zvz">
+            <connections>
+                <binding destination="-2" name="contentArray" keyPath="self.uoData.terrainIndex" id="Pzp-Ej-kvT"/>
+            </connections>
+        </arrayController>
+    </objects>
+</document>

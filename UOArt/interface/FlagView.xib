@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22155" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22155"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FlagViewController" customModule="UOArt" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="c22-O7-iKe" id="KP0-DX-vKy"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="c22-O7-iKe" customClass="BaseView" customModule="UOArt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GY6-Yi-l4R">
+                    <rect key="frame" x="-2" y="170" width="38" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Value" id="R1G-0j-hTn">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c3V-oV-Ix0">
+                    <rect key="frame" x="42" y="168" width="192" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="192" id="WWt-kB-toB"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="KH2-nh-2yR">
+                        <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" allowsFloats="NO" usesGroupingSeparator="NO" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="hpq-m1-z0G"/>
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="information.flag" id="ZBd-KG-q1U"/>
+                    </connections>
+                </textField>
+                <gridView xPlacement="leading" yPlacement="top" rowAlignment="none" rowSpacing="0.0" columnSpacing="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="9NK-t6-DEl">
+                    <rect key="frame" x="0.0" y="0.0" width="896" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="896" id="9s3-wE-GuE"/>
+                        <constraint firstAttribute="height" constant="160" id="w0v-l6-8SL"/>
+                    </constraints>
+                    <rows>
+                        <gridRow height="20" id="7gd-28-Ae7"/>
+                        <gridRow height="20" id="DIh-WB-Smh"/>
+                        <gridRow height="20" id="yOb-Jn-vvl"/>
+                        <gridRow height="20" id="kP1-YB-4wz"/>
+                        <gridRow height="20" id="R4k-ii-8LA"/>
+                        <gridRow height="20" id="k4I-0i-w7p"/>
+                        <gridRow height="20" id="Z3M-O7-552"/>
+                        <gridRow height="20" id="Y3j-CQ-rDL"/>
+                    </rows>
+                    <columns>
+                        <gridColumn width="112" id="Mpd-SH-HyM"/>
+                        <gridColumn width="112" id="9CH-pS-H2F"/>
+                        <gridColumn width="112" id="bhm-xh-I2g"/>
+                        <gridColumn width="112" id="hbD-47-ugt"/>
+                        <gridColumn width="112" id="gM5-4f-NVx"/>
+                        <gridColumn width="112" id="2nU-bS-qej"/>
+                        <gridColumn width="112" id="GAa-8K-ESo"/>
+                        <gridColumn width="112" id="QPt-Zf-T2U"/>
+                    </columns>
+                    <gridCells>
+                        <gridCell row="7gd-28-Ae7" column="Mpd-SH-HyM" id="Wlv-ik-o3w">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="28B-F0-6SB">
+                                <rect key="frame" x="-2" y="143" width="98" height="18"/>
+                                <buttonCell key="cell" type="check" title="background" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="2W5-uL-6q0">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.background" id="JY6-Lp-Rtf"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="7gd-28-Ae7" column="9CH-pS-H2F" id="Rb6-EL-j7G">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8iV-IU-16H">
+                                <rect key="frame" x="110" y="143" width="74" height="18"/>
+                                <buttonCell key="cell" type="check" title="weapon" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Tjm-nD-tF8">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.weapon" id="ppQ-JC-WIi"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="7gd-28-Ae7" column="bhm-xh-I2g" id="iEj-BR-6w2">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FSg-rC-Afw">
+                                <rect key="frame" x="222" y="143" width="97" height="18"/>
+                                <buttonCell key="cell" type="check" title="transparent" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="eaD-VV-tsE">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.transparent" id="bou-T0-HGk"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="7gd-28-Ae7" column="hbD-47-ugt" id="fwm-H6-zkm">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zwo-We-9PZ">
+                                <rect key="frame" x="334" y="143" width="95" height="18"/>
+                                <buttonCell key="cell" type="check" title="translucent" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="uWk-c4-muO">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.translucent" id="dUJ-O6-IV2"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="7gd-28-Ae7" column="gM5-4f-NVx" id="PGy-SV-mC4">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J1M-zY-evj">
+                                <rect key="frame" x="446" y="143" width="50" height="18"/>
+                                <buttonCell key="cell" type="check" title="wall" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="e9H-b3-9I0">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.wall" id="dYU-Vq-0s6"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="7gd-28-Ae7" column="2nU-bS-qej" id="rek-xC-V5c">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RNw-v8-mvQ">
+                                <rect key="frame" x="558" y="143" width="86" height="18"/>
+                                <buttonCell key="cell" type="check" title="damaging" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Qtj-gd-AlP">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.damaging" id="zwb-ZK-Z3Q"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="7gd-28-Ae7" column="GAa-8K-ESo" id="grd-Tk-MMp">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TJL-Ag-eez">
+                                <rect key="frame" x="670" y="143" width="95" height="18"/>
+                                <buttonCell key="cell" type="check" title="impassable" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GhK-s8-FcS">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.impassable" id="nrk-fA-Qo4"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="7gd-28-Ae7" column="QPt-Zf-T2U" id="CxS-vb-vJX">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BnD-hD-DMR">
+                                <rect key="frame" x="782" y="143" width="48" height="18"/>
+                                <buttonCell key="cell" type="check" title="wet" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="r6u-92-PRs">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.wet" id="SvJ-0c-K4v"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="Mpd-SH-HyM" id="ODb-H3-YnV">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jYT-63-Kos">
+                                <rect key="frame" x="-2" y="123" width="50" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit8" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="W6w-II-3bD">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit8" id="f7X-5K-CGY"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="9CH-pS-H2F" id="2Cm-Cv-g6N">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="45A-63-eYw">
+                                <rect key="frame" x="110" y="123" width="72" height="18"/>
+                                <buttonCell key="cell" type="check" title="surface" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="bOw-kr-w4n">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.surface" id="7Kd-DT-EWi"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="bhm-xh-I2g" id="fTg-OK-jAj">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JGi-Cq-89d">
+                                <rect key="frame" x="222" y="123" width="82" height="18"/>
+                                <buttonCell key="cell" type="check" title="cimbable" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="DqY-yR-2Qa">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.climbable" id="bg8-gS-31e"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="hbD-47-ugt" id="NL7-15-BCP">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xqr-Wk-pMw">
+                                <rect key="frame" x="334" y="123" width="84" height="18"/>
+                                <buttonCell key="cell" type="check" title="stackable" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MGj-X2-ImG">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.stackable" id="DdG-X2-2ih"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="gM5-4f-NVx" id="ri3-hS-r8G">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Un-SI-MT1">
+                                <rect key="frame" x="446" y="123" width="72" height="18"/>
+                                <buttonCell key="cell" type="check" title="window" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="cIg-xG-2Zb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.window" id="Uqu-Y2-ZX9"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="2nU-bS-qej" id="y85-qA-S3r">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KzM-11-lOS">
+                                <rect key="frame" x="558" y="123" width="77" height="18"/>
+                                <buttonCell key="cell" type="check" title="noShoot" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="QH4-04-neO">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.noShoot" id="9UT-1H-3w4"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="GAa-8K-ESo" id="25G-HO-wdn">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oo7-0T-N0r">
+                                <rect key="frame" x="670" y="123" width="73" height="18"/>
+                                <buttonCell key="cell" type="check" title="articleA" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="cOH-sN-zxH">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.articleA" id="nYU-BE-YKV"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="DIh-WB-Smh" column="QPt-Zf-T2U" id="Ubn-6K-dOH">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="phK-Ge-ge0">
+                                <rect key="frame" x="782" y="123" width="80" height="18"/>
+                                <buttonCell key="cell" type="check" title="articleAn" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SeJ-h3-YK7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.articleAn" id="vsq-76-oNU"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="Mpd-SH-HyM" id="yAt-qM-kli">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-dj-Ihd">
+                                <rect key="frame" x="-2" y="103" width="86" height="18"/>
+                                <buttonCell key="cell" type="check" title="articleThe" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="NLa-g8-FAt">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.articleThe" id="2Zk-Iy-u5E"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="9CH-pS-H2F" id="OM3-1J-njc">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o2E-qX-2wc">
+                                <rect key="frame" x="110" y="103" width="67" height="18"/>
+                                <buttonCell key="cell" type="check" title="foilage" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="uQq-cM-vWe">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.foilage" id="ivW-Lu-Vte"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="bhm-xh-I2g" id="WXx-mK-vyT">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Q5-Hs-gCs">
+                                <rect key="frame" x="222" y="103" width="89" height="18"/>
+                                <buttonCell key="cell" type="check" title="partialHue" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="TY8-GA-66J">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.partialHue" id="UVa-kj-h9D"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="hbD-47-ugt" id="Lk0-CS-2NM">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D3H-BV-E5H">
+                                <rect key="frame" x="334" y="103" width="80" height="18"/>
+                                <buttonCell key="cell" type="check" title="noHouse" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="UDa-c6-Bm6">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.noHouse" id="sdk-2H-gOI"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="gM5-4f-NVx" id="Z69-JI-PgF">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ERg-Cd-fU9">
+                                <rect key="frame" x="446" y="103" width="53" height="18"/>
+                                <buttonCell key="cell" type="check" title="map" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="DaX-oA-Hk8">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.map" id="NfH-y6-ZZW"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="2nU-bS-qej" id="Maq-VM-INz">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MMa-7d-KLn">
+                                <rect key="frame" x="558" y="103" width="83" height="18"/>
+                                <buttonCell key="cell" type="check" title="container" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="xvR-LN-YOu">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.container" id="DsT-fE-4uo"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="GAa-8K-ESo" id="Txg-h6-pw6">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VDt-XV-Se6">
+                                <rect key="frame" x="670" y="103" width="81" height="18"/>
+                                <buttonCell key="cell" type="check" title="wearable" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hyL-dr-a3K">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.wearable" id="tGM-k6-kIh"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="yOb-Jn-vvl" column="QPt-Zf-T2U" id="8fb-0g-HZr">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pc8-Ep-Ddj">
+                                <rect key="frame" x="782" y="103" width="95" height="18"/>
+                                <buttonCell key="cell" type="check" title="lightSource" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="UBZ-o3-pUW">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.lightSource" id="c1j-LP-66a"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="Mpd-SH-HyM" id="Ve0-p5-LRS">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J3g-Lm-0SO">
+                                <rect key="frame" x="-2" y="83" width="82" height="18"/>
+                                <buttonCell key="cell" type="check" title="animated" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EJl-1c-hYX">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.animated" id="Tw2-GM-Pt1"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="9CH-pS-H2F" id="76K-PD-Y68">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EE3-pl-LBh">
+                                <rect key="frame" x="110" y="83" width="89" height="18"/>
+                                <buttonCell key="cell" type="check" title="hoverOver" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Glc-Jb-yNf">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.hoverOver" id="HSF-k2-Q6X"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="bhm-xh-I2g" id="yQQ-gT-MX2">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YgI-Jm-E3j">
+                                <rect key="frame" x="222" y="83" width="87" height="18"/>
+                                <buttonCell key="cell" type="check" title="noDiagnol" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="eVS-gm-5AY">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.noDiagnol" id="H1N-7E-3c7"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="hbD-47-ugt" id="ROC-1o-QbZ">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1ga-k6-WBI">
+                                <rect key="frame" x="334" y="83" width="62" height="18"/>
+                                <buttonCell key="cell" type="check" title="armor" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="47F-VD-qb7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.armor" id="gG8-CA-ra7"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="gM5-4f-NVx" id="FNb-jh-TUh">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BqS-ou-BMk">
+                                <rect key="frame" x="446" y="83" width="51" height="18"/>
+                                <buttonCell key="cell" type="check" title="roof" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nM2-1S-xAh">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.roof" id="n6U-3p-rrm"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="2nU-bS-qej" id="ee4-zP-zAn">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zXG-4D-yg4">
+                                <rect key="frame" x="558" y="83" width="54" height="18"/>
+                                <buttonCell key="cell" type="check" title="door" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="06D-bl-O1m">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.door" id="2PC-iQ-Uvh"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="GAa-8K-ESo" id="eQ5-2c-RDy">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I7t-Ag-Myz">
+                                <rect key="frame" x="670" y="83" width="83" height="18"/>
+                                <buttonCell key="cell" type="check" title="stairBack" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tQa-Aq-dAP">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.stairBack" id="T4z-DY-z9Z"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="kP1-YB-4wz" column="QPt-Zf-T2U" id="o8j-YR-Yny">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a0w-ka-7f8">
+                                <rect key="frame" x="782" y="83" width="85" height="18"/>
+                                <buttonCell key="cell" type="check" title="stairRight" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="r4S-2o-m4E">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.stairRight" id="13S-oz-llu"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="Mpd-SH-HyM" id="RZV-wq-uZv">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Twu-lJ-eOg">
+                                <rect key="frame" x="-2" y="63" width="94" height="18"/>
+                                <buttonCell key="cell" type="check" title="alphaBlend" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="7kk-kh-QcN">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.alphaBlend" id="go6-nA-kCx"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="9CH-pS-H2F" id="7RJ-Id-lkD">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HCM-Gn-prU">
+                                <rect key="frame" x="110" y="63" width="92" height="18"/>
+                                <buttonCell key="cell" type="check" title="useNewArt" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="VYK-Ve-AsP">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.useNewArt" id="aIH-y2-j3q"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="bhm-xh-I2g" id="Jja-we-Igb">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TBI-Hg-Cms">
+                                <rect key="frame" x="222" y="63" width="75" height="18"/>
+                                <buttonCell key="cell" type="check" title="artUsed" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="pAe-Ry-HK1">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.artUsed" id="8Cu-5T-O5e"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="hbD-47-ugt" id="8hJ-v3-gZx">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fWQ-Wz-3bo">
+                                <rect key="frame" x="334" y="63" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit35" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tHM-rR-an0">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit35" id="gaw-Ej-XSc"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="gM5-4f-NVx" id="faY-sf-ABw">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-Zj-2pH">
+                                <rect key="frame" x="446" y="63" width="90" height="18"/>
+                                <buttonCell key="cell" type="check" title="noShadow" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="0WZ-kb-cox">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.noShadow" id="Id3-bc-ezJ"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="2nU-bS-qej" id="A7e-CI-gUe">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yx4-lq-UsA">
+                                <rect key="frame" x="558" y="63" width="89" height="18"/>
+                                <buttonCell key="cell" type="check" title="pixelBleed" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="X8A-jk-roY">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.pixelBleed" id="odC-Z8-8dD"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="GAa-8K-ESo" id="PAz-HD-Vyr">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6zw-A6-J9g">
+                                <rect key="frame" x="670" y="63" width="113" height="18"/>
+                                <buttonCell key="cell" type="check" title="playAnimOnce" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zHs-Xf-ikR">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.playAnimOnce" id="jjy-vc-KmT"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="R4k-ii-8LA" column="QPt-Zf-T2U" id="MNP-eV-qay">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oKz-dD-3IM">
+                                <rect key="frame" x="782" y="63" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit39" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8wO-GS-mEK">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit39" id="YEu-ce-G1a"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="Mpd-SH-HyM" id="Y3z-EN-AUc">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pun-AG-49f">
+                                <rect key="frame" x="-2" y="43" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit40" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SCD-xY-yBX">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit40" id="Edr-Db-LCk"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="9CH-pS-H2F" id="Thz-Ql-Ibe">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hdI-GP-2kZ">
+                                <rect key="frame" x="110" y="43" width="56" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit41" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Duz-SM-H7x">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit41" id="bnB-Cq-I5T"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="bhm-xh-I2g" id="1K3-IQ-6YN">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pI1-ny-dvE">
+                                <rect key="frame" x="222" y="43" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit42" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ILv-Q6-fuE">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit42" id="8TJ-Hn-xuL"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="hbD-47-ugt" id="BB7-gV-ayY">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FMF-PY-phR">
+                                <rect key="frame" x="334" y="43" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit43" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Var-sS-b1g">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit43" id="kxb-u0-0L1"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="gM5-4f-NVx" id="Bhv-nE-TLL">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="awF-br-EX5">
+                                <rect key="frame" x="446" y="43" width="59" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit44" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CT6-4l-ZFV">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit44" id="SLy-at-Y7C"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="2nU-bS-qej" id="d7x-3b-2tO">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iAj-KX-GlY">
+                                <rect key="frame" x="558" y="43" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit45" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Nbw-ye-79f">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit45" id="tbu-yy-JOW"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="GAa-8K-ESo" id="sUM-ro-9jU">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-Rs-ZqS">
+                                <rect key="frame" x="670" y="43" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit46" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="oyP-He-FPI">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit46" id="3lG-zq-NzD"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="k4I-0i-w7p" column="QPt-Zf-T2U" id="Nu2-F5-dmZ">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="URF-wF-uxU">
+                                <rect key="frame" x="782" y="43" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit47" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="b9f-0A-aZ9">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit47" id="8Nh-mZ-yv6"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="Mpd-SH-HyM" id="zMj-p5-uXL">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U6O-SC-FgR">
+                                <rect key="frame" x="-2" y="23" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit48" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="v8T-t1-SqH">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit48" id="c7j-Ri-al9"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="9CH-pS-H2F" id="9d4-5O-zyu">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k5W-qL-5ql">
+                                <rect key="frame" x="110" y="23" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit49" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="TB7-oe-Lvm">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit49" id="iQV-lh-Efl"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="bhm-xh-I2g" id="F0n-Ib-ufl">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EpF-4x-B6H">
+                                <rect key="frame" x="222" y="23" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit50" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="uC7-l6-wyd">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit50" id="gWJ-KB-Ctb"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="hbD-47-ugt" id="egO-hA-60z">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mq8-RQ-vjI">
+                                <rect key="frame" x="334" y="23" width="56" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit51" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Tdk-yp-lUS">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit51" id="3Pm-OR-jR9"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="gM5-4f-NVx" id="obM-zF-83u">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gqr-Mh-2bJ">
+                                <rect key="frame" x="446" y="23" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit52" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Lxu-cq-1sb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit52" id="sct-co-P8R"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="2nU-bS-qej" id="p4J-gV-Fd7">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A1X-B1-lna">
+                                <rect key="frame" x="558" y="23" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit53" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="q4r-Wl-t08">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit53" id="H2u-gP-fFr"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="GAa-8K-ESo" id="4KM-FX-JfB">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fXu-J8-892">
+                                <rect key="frame" x="670" y="23" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit54" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GPc-f5-B73">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit54" id="9P3-38-fvK"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z3M-O7-552" column="QPt-Zf-T2U" id="ec2-lR-PQD">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fyp-ns-i7w">
+                                <rect key="frame" x="782" y="23" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit55" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ftU-XO-4Yk">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit55" id="BSR-aM-Uud"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="Mpd-SH-HyM" id="Dcl-bC-p0p">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ef7-Nw-FbF">
+                                <rect key="frame" x="-2" y="3" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit56" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="sL2-g3-k0P">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit56" id="rOy-Ao-zpN"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="9CH-pS-H2F" id="MaN-p7-qg5">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-ng-Ll7">
+                                <rect key="frame" x="110" y="3" width="57" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit57" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="dKo-kA-ZeJ">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit57" id="P5B-7R-r7D"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="bhm-xh-I2g" id="zYE-88-h3A">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7ev-5m-WNe">
+                                <rect key="frame" x="222" y="3" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit58" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="XYH-8f-NXV">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit58" id="ZIk-AJ-H6W"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="hbD-47-ugt" id="xDS-id-bHS">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RAq-I3-Wbj">
+                                <rect key="frame" x="334" y="3" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit59" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="X0h-Rl-UKh">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit59" id="cJQ-ap-IjB"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="gM5-4f-NVx" id="ct9-GB-ROr">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f0e-Xb-16M">
+                                <rect key="frame" x="446" y="3" width="59" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit60" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SOX-qd-gng">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit60" id="f7B-Qo-wwY"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="2nU-bS-qej" id="SJv-8d-j3L">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZUr-tQ-c21">
+                                <rect key="frame" x="558" y="3" width="56" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit61" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GMW-5h-iYI">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit61" id="kyj-eW-D6m"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="GAa-8K-ESo" id="KLO-a9-O8C">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3LV-P4-q7k">
+                                <rect key="frame" x="670" y="3" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit62" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="IjI-nW-ypk">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit62" id="nlu-Uo-PGP"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Y3j-CQ-rDL" column="QPt-Zf-T2U" id="35N-gx-1ca">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-LJ-gJj">
+                                <rect key="frame" x="782" y="3" width="58" height="18"/>
+                                <buttonCell key="cell" type="check" title="bit63" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="NuG-wE-zp7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="information.bit63" id="hgx-gp-bD3"/>
+                                </connections>
+                            </button>
+                        </gridCell>
+                    </gridCells>
+                </gridView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="GY6-Yi-l4R" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="3mm-XD-YR4"/>
+                <constraint firstItem="c3V-oV-Ix0" firstAttribute="leading" secondItem="GY6-Yi-l4R" secondAttribute="trailing" constant="8" symbolic="YES" id="Qeo-fo-fQi"/>
+                <constraint firstItem="9NK-t6-DEl" firstAttribute="leading" secondItem="GY6-Yi-l4R" secondAttribute="leading" id="WcC-O6-tff"/>
+                <constraint firstAttribute="bottom" secondItem="9NK-t6-DEl" secondAttribute="bottom" id="a8I-d0-sCa"/>
+                <constraint firstItem="c3V-oV-Ix0" firstAttribute="firstBaseline" secondItem="GY6-Yi-l4R" secondAttribute="firstBaseline" id="by2-sS-XE0"/>
+                <constraint firstItem="9NK-t6-DEl" firstAttribute="top" secondItem="c3V-oV-Ix0" secondAttribute="bottom" constant="8" symbolic="YES" id="dnM-Sf-WlJ"/>
+                <constraint firstItem="c3V-oV-Ix0" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="ee5-Bs-cRF"/>
+                <constraint firstAttribute="trailing" secondItem="9NK-t6-DEl" secondAttribute="trailing" id="jBp-IX-EhQ"/>
+            </constraints>
+            <point key="canvasLocation" x="-476" y="-4"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="HYm-Qe-9W0"/>
+    </objects>
+</document>
