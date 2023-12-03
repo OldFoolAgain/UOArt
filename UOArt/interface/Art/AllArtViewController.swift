@@ -15,7 +15,7 @@ class AllArtViewController : NSViewController {
     @IBOutlet var arrayController:NSArrayController!
     @IBOutlet var tableView:NSTableView!
 
-    @objc dynamic var currentIndex:Int = 0{
+    @objc dynamic var currentIndex:Int = -1 {
         didSet{
             if (currentIndex != arrayController.selectionIndex) {
                 self.tableView.scrollRowToVisible(currentIndex)

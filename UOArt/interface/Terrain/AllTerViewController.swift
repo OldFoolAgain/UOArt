@@ -15,7 +15,7 @@ class AllTerViewController : NSViewController {
     @IBOutlet var arrayController:NSArrayController!
     @IBOutlet var tableView:NSTableView!
 
-    @objc dynamic var currentIndex = 0 {
+    @objc dynamic var currentIndex = -1 {
         
         didSet{
             if (currentIndex != arrayController.selectionIndex) {
@@ -56,5 +56,6 @@ extension AllTerViewController {
                 
             }
         }
+        
     }
 }

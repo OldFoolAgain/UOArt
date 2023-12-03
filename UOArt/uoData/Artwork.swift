@@ -129,7 +129,7 @@ extension Artwork {
         guard tileid >= 0 && tileid <= 0xFFFF else {
             return Data()
         }
-        return artData[tileid + 0x4000]
+        return artData[tileid ]
     }
     //=================================================================================================================
     public func terrainData(forTileID tileid:Int) -> Data {

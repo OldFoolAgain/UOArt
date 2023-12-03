@@ -62,7 +62,7 @@ extension UOData {
         guard tileid >= 0 && tileid <= 0xFFFF else {
             return nil
         }
-        return artwork.artImage(forData: artwork.artData(forTileID: tileid))
+        return artwork.artImage(forData: artwork.artData(forTileID: tileid ))
     }
     // ==============================================================
     func terrainInformation(forTileID tileid:Int) -> WTerrainInformation {

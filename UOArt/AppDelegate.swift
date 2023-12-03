@@ -60,7 +60,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         uoDataLocation = (UserDefaults.standard.object(forKey: "UODATALOCATION")as? Data)?.securityBookmark
         if (uoDataLocation != nil){
             _ = uoDataLocation?.startAccessingSecurityScopedResource()
-            self.uoData.loadUOData(uoLocationURL: uoDataLocation)
         }
         // Place our views
         
@@ -68,7 +67,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         terrainController.view.frame = terrainViewHolder.bounds
         artViewHolder.addSubview(artController.view)
         terrainViewHolder.addSubview(terrainController.view)
-        
+        self.refreshData(nil)
+
     
     }
 
